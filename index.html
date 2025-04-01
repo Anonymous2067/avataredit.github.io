@@ -1,140 +1,165 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Grid</title>
+    <title></title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
+            padding: 20px;
+            background-color: #f5f5f5;
         }
-
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            margin: 20px;
+        h1 {
+            text-align: center;
+            color: #333;
         }
-
-        .video-wrapper {
-            width: 23%;
-            margin: 10px;
-            background-color: #000;
-            border-radius: 10px;
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .video-container {
+            background-color: #fff;
+            border-radius: 8px;
             overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
-
-        video {
+        .video-container video {
             width: 100%;
-            border-radius: 10px;
+            display: block;
         }
-
-        @media (max-width: 768px) {
-            .video-wrapper {
-                width: 48%;
+        .video-title {
+            padding: 10px;
+            text-align: center;
+            font-size: 14px;
+            color: #555;
+        }
+        @media (max-width: 900px) {
+            .video-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
-
-        @media (max-width: 480px) {
-            .video-wrapper {
-                width: 100%;
+        @media (max-width: 500px) {
+            .video-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
-
-    <div class="container">
-        <!-- Video 1 -->
-        <div class="video-wrapper">
+    <h1>视频网格布局</h1>
+    <div class="video-grid">
+        <!-- 视频1 -->
+        <div class="video-container">
             <video controls>
                 <source src="ID1_demo0_with_text.mp4" type="video/mp4">
-                Your browser does not support the video tag.
+                您的浏览器不支持HTML5视频
             </video>
+            <div class="video-title"></div>
         </div>
-        <!-- Video 2 -->
-        <div class="video-wrapper">
+        
+        <!-- 视频2 -->
+        <div class="video-container">
             <video controls>
                 <source src="ID1_demo1_with_text.mp4" type="video/mp4">
-                Your browser does not support the video tag.
+                您的浏览器不支持HTML5视频
             </video>
+            <div class="video-title"></div>
         </div>
-        <!-- Video 3 -->
-        <div class="video-wrapper">
+        
+        <!-- 视频3 -->
+        <div class="video-container">
             <video controls>
                 <source src="ID1_demo2_with_text.mp4" type="video/mp4">
-                Your browser does not support the video tag.
+                您的浏览器不支持HTML5视频
             </video>
+            <div class="video-title"></div>
         </div>
-        <!-- Video 4 -->
-        <div class="video-wrapper">
+        
+        <!-- 视频4 -->
+        <div class="video-container">
             <video controls>
                 <source src="ID1_demo3_with_text.mp4" type="video/mp4">
-                Your browser does not support the video tag.
+                您的浏览器不支持HTML5视频
             </video>
+            <div class="video-title"></div>
         </div>
-
-        <!-- Video 5 -->
-        <div class="video-wrapper">
+        
+        <!-- 视频5 -->
+        <div class="video-container">
             <video controls>
                 <source src="ID7_demo0_with_text.mp4" type="video/mp4">
-                Your browser does not support the video tag.
+                您的浏览器不支持HTML5视频
             </video>
+            <div class="video-title"></div>
         </div>
-        <!-- Video 6 -->
-        <div class="video-wrapper">
+        
+        <!-- 视频6 -->
+        <div class="video-container">
             <video controls>
                 <source src="ID7_demo1_with_text.mp4" type="video/mp4">
-                Your browser does not support the video tag.
+                您的浏览器不支持HTML5视频
             </video>
+            <div class="video-title"></div>
         </div>
-        <!-- Video 7 -->
-        <div class="video-wrapper">
+        
+        <!-- 视频7 -->
+        <div class="video-container">
             <video controls>
                 <source src="ID7_demo2_with_text.mp4" type="video/mp4">
-                Your browser does not support the video tag.
+                您的浏览器不支持HTML5视频
             </video>
+            <div class="video-title"></div>
         </div>
-        <!-- Video 8 -->
-        <div class="video-wrapper">
+        
+        <!-- 视频8 -->
+        <div class="video-container">
             <video controls>
                 <source src="ID7_demo3_with_text.mp4" type="video/mp4">
-                Your browser does not support the video tag.
+                您的浏览器不支持HTML5视频
             </video>
+            <div class="video-title"></div>
         </div>
-
-        <!-- Video 9 -->
-        <div class="video-wrapper">
+        
+        <!-- 视频9 -->
+        <div class="video-container">
             <video controls>
                 <source src="ID8_demo0_with_text.mp4" type="video/mp4">
-                Your browser does not support the video tag.
+                您的浏览器不支持HTML5视频
             </video>
+            <div class="video-title"></div>
         </div>
-        <!-- Video 10 -->
-        <div class="video-wrapper">
+        
+        <!-- 视频10 -->
+        <div class="video-container">
             <video controls>
                 <source src="ID8_demo1_with_text.mp4" type="video/mp4">
-                Your browser does not support the video tag.
+                您的浏览器不支持HTML5视频
             </video>
+            <div class="video-title"></div>
         </div>
-        <!-- Video 11 -->
-        <div class="video-wrapper">
+        
+        <!-- 视频11 -->
+        <div class="video-container">
             <video controls>
                 <source src="ID8_demo2_with_text.mp4" type="video/mp4">
-                Your browser does not support the video tag.
+                您的浏览器不支持HTML5视频
             </video>
+            <div class="video-title"></div>
         </div>
-        <!-- Video 12 -->
-        <div class="video-wrapper">
+        
+        <!-- 视频12 -->
+        <div class="video-container">
             <video controls>
                 <source src="ID8_demo3_with_text.mp4" type="video/mp4">
-                Your browser does not support the video tag.
+                您的浏览器不支持HTML5视频
             </video>
+            <div class="video-title">2</div>
         </div>
     </div>
-
 </body>
 </html>
